@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    azure:
+      active-directory:
+        enabled: true
+        profile:
+          tenant-id: 1a4c120c-a869-44c9-a51b-74538a67d4dd
+        credential:
+          client-id: 89a782d7-9a83-4448-a756-187403269558
+          client-secret: wws8Q~QwL032G~-Hr.paMNi0foC4x4ReVYvrfaC6
+        app-id-uri: api://89a782d7-9a83-4448-a756-187403269558
+        application-type: web_application_and_resource_server  # This is required.
+        authorization-clients:
+          graph:
+            authorizationGrantType: authorization_code  # This is required.
+            scopes:
+              - https://graph.microsoft.com/User.Read
+              - https://graph.microsoft.com/Directory.Read.All
